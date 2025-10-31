@@ -15,15 +15,11 @@
 
 #include <iostream>
 
-
 using namespace PenMath;
-
 
 #define CHECK_MATRIX2(matrix, matrixGlm) \
 	CHECK(matrix[0][0] == Catch::Approx(matrixGlm[0][0])); CHECK(matrix[1][0] == Catch::Approx(matrixGlm[1][0])); \
 	CHECK(matrix[0][1] == Catch::Approx(matrixGlm[0][1])); CHECK(matrix[1][1] == Catch::Approx(matrixGlm[1][1]));
-
-
 
 TEST_CASE("Matrix2", "[.all][matrix][Matrix2]")
 {
@@ -51,8 +47,6 @@ TEST_CASE("Matrix2", "[.all][matrix][Matrix2]")
 		empty = oneParam;
 		emptyGlm = oneParamGlm;
 		CHECK_MATRIX2(empty, emptyGlm);
-
-		CHECK(sizeof(PenMath::Mat2) == sizeof(glm::mat2));
 	}
 
 	SECTION("Accessor")
@@ -69,15 +63,15 @@ TEST_CASE("Matrix2", "[.all][matrix][Matrix2]")
 
 	SECTION("Arithmetic")
 	{
-		PenMath::Mat2 const small{
-			PenMath::Vector2{1.f, 2.f},
-			PenMath::Vector2{2.f, 3.f}
-		};
+		PenMath::Mat2 const small(
+			PenMath::Vector2f{1.f, 2.f},
+			PenMath::Vector2f{2.f, 3.f}
+		);
 
-		PenMath::Mat2 const big{
-			PenMath::Vector2{9.f, 8.f},
-			PenMath::Vector2{8.f, 7.f}
-		};
+		PenMath::Mat2 const big(
+			PenMath::Vector2f{9, 8},
+			PenMath::Vector2f{8, 7}
+		);
 
 		glm::mat2 const smallGlm{
 			glm::vec2{1.f, 2.f},

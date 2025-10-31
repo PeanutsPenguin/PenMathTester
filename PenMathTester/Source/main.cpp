@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
 	}
 
 	///TEST GLOBAL FUNCTIONS
+	//arguments.push_back("[vector],");
 	//arguments.push_back("Vector2,");
 	//arguments.push_back("Vector3,");
 	//arguments.push_back("Vector4,");
