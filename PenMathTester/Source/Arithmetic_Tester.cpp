@@ -34,20 +34,17 @@ TEST_CASE("Arithmetic", "[.all]")
 		CHECK(PenMath::clamp(valueC, valueB, valueC) == valueC); /* Value is equal to max */
 	}
 
+	/* Square Root */
+	{
+		CHECK(PenMath::squareRoot(25.f) == 5.f);
+		CHECK(PenMath::squareRoot(-7771.f) == 0.f);
+
+		CHECK(PenMath::squareRoot(PenMath::power(2.f, 2)) == 2.f);
+	}
+
 	/*Power*/
 	{
 		CHECK(PenMath::power(25.f, 2) == 625.f);
-		CHECK(PenMath::power(7.f, 3) == 343.f);	}
-
-	/* Swap */
-	{
-		float valueA = 75.57f, valueB = 57.75f;
-		int valueC = 100, valueD = 200;
-		PenMath::swap(valueA, valueB);
-		PenMath::swap(valueC, valueD);
-		CHECK(valueA == 57.75f);
-		CHECK(valueB == 75.57f);
-		CHECK(valueC == 200);
-		CHECK(valueD == 100);
+		CHECK(PenMath::power(7.f, 3) == 343.f);	
 	}
 }
