@@ -1,5 +1,5 @@
 #PenMathTester RootCmake
-cmake_minimum_required(VERSION 3.9.1 FATAL_ERROR) # PATH_EQUAL
+cmake_minimum_required(VERSION 4.0 FATAL_ERROR) # PATH_EQUAL
 
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 project(${PROJECT_NAME} LANGUAGES CXX)
@@ -29,7 +29,7 @@ FetchContent_MakeAvailable(Catch2)
 FetchContent_Declare(
 	glm
 	GIT_REPOSITORY	https://github.com/g-truc/glm.git
-	GIT_TAG 	bf71a834948186f4097caa076cd2663c69a10e1e #refs/tags/1.0.1
+	GIT_TAG 	a532f5b1cf27d6a3c099437e6959cf7e398a0a67 #v1.0.2
 )
 FetchContent_MakeAvailable(glm)
 

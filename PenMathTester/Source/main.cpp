@@ -18,7 +18,8 @@ int main(int argc, char* argv[])
 	//arguments.push_back("Degree,");
 	//arguments.push_back("Arithmetic,");
 	//arguments.push_back("[Angle],");
-	arguments.push_back("Matrix2");
+	//arguments.push_back("Matrix2");
+	arguments.push_back("Matrix3");
 
 
 
