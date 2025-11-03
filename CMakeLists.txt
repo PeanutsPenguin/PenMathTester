@@ -1,4 +1,5 @@
 #PenMathTester RootCmake
+set(CMAKE_CXX_STANDARD 20)
 cmake_minimum_required(VERSION 4.0 FATAL_ERROR) # PATH_EQUAL
 
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)

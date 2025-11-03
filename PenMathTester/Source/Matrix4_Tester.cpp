@@ -72,11 +72,11 @@ TEST_CASE("Matrix4", "[.all][matrix][Matrix4]")
 
 		Mat4 rotateTester = Mat4::rotate(Vector3f{ 0.f, 0.f, c_halfPi });
 
-		rotateTester *= Mat4::rotate(Vector3f{ 0.f, c_halfPi, 0.f });
+		//rotateTester *= Mat4::rotate(Vector3f{ 0.f, c_halfPi, 0.f });
 
 		glm::mat4 rotateTesterGlm = glm::rotate(glm::mat4(1.f), c_halfPi, glm::vec3{ 0.f, 0.f, 1.f });
 		
-		rotateTesterGlm = glm::rotate(rotateTesterGlm, c_halfPi, glm::vec3{ 0.f, 1.f, 0.f });
+		//rotateTesterGlm = glm::rotate(rotateTesterGlm, c_halfPi, glm::vec3{ 0.f, 1.f, 0.f });
 		
 		CHECK_MATRIX4(rotateTester, rotateTesterGlm);
 

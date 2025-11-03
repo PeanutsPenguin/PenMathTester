@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
 	}
 
 	///TEST GLOBAL FUNCTIONS
+	arguments.push_back("[all],");
 	//arguments.push_back("[vector],");
 	//arguments.push_back("Vector2,");
 	//arguments.push_back("Vector3,");
@@ -20,7 +21,8 @@ int main(int argc, char* argv[])
 	//arguments.push_back("[Angle],");
 	//arguments.push_back("Matrix2");
 	//arguments.push_back("Matrix3");
-	arguments.push_back("Matrix4");
+	//arguments.push_back("Matrix4");
+	//arguments.push_back("Interpolation");
 
 
 
